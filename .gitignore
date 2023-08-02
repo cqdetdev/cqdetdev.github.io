@@ -13,4 +13,5 @@ files
 __pycache__
 .vscode
 assets
-dist
+# dist
+img
