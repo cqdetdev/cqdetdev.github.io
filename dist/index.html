@@ -5,7 +5,7 @@
     <meta property="og:title" content="cqdetdev">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://cqdetdev.github.io">
-    <meta property="og:image" content="/img/profile.webp">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/522895569039917066/cfeb39aa5e6d8290f4a406c2ac3859af.png?size=128">
     <meta property="og:description" content="Welcome to cqdetdev.github.io!">
     <meta name="theme-color" content="#cc0f35">
     
@@ -22,31 +22,4 @@
 <link rel="modulepreload" href="/cqdet_github_io-774d418c55659014.js"></head>
 <body>
 
-<script type="module">import init from '/cqdet_github_io-774d418c55659014.js';init('/cqdet_github_io-774d418c55659014_bg.wasm');</script><script>(function () {
-    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    var url = protocol + '//' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
-                // when we successfully reconnect, we'll force a
-                // reload (since we presumably lost connection to
-                // trunk due to it being killed, so it will have
-                // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
-
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
-</script></body></html>
+<script type="module">import init from '/cqdet_github_io-774d418c55659014.js';init('/cqdet_github_io-774d418c55659014_bg.wasm');</script></body></html>
