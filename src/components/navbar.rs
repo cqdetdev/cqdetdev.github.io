@@ -22,12 +22,16 @@ pub fn Navbar(props: &NavbarProps) -> Html {
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                <a class="navbar-item has-text-danger-dark has-background-black">
+                <a href="https://cqdetdev.github.io/" class="navbar-item has-text-danger-dark has-background-black">
                     {"Home"}
                 </a>
 
-                <a class="navbar-item has-text-danger-dark has-background-black">
+                <a href="https://github.com/cqdetdev" class="navbar-item has-text-danger-dark has-background-black">
                     {"Github"}
+                </a>
+
+                <a href="https://github.com/cqdetdev/cqdetdev.github.io" class="navbar-item has-text-danger-dark has-background-black">
+                    {"Source"}
                 </a>
 
                 <div class="navbar-item has-dropdown is-hoverable">
