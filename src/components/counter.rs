@@ -3,7 +3,7 @@ use yew::prelude::*;
 pub struct CounterProps {}
 
 #[function_component]
-pub fn Counter(props: &CounterProps) -> Html {
+pub(crate) fn Counter(props: &CounterProps) -> Html {
     let CounterProps {} = props;
     let count = use_state(||0);
     let onclick = {

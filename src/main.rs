@@ -1,7 +1,7 @@
 mod components;
-use components::{navbar::Navbar, title::Title, counter::Counter};
+use components::{navbar::Navbar, title::Title, counter::Counter, particles::Particles, typed::Typed};
 mod pages;
-use pages::{home::Home, page_not_found::PageNotFound};
+use pages::{home::Home, page_not_found::PageNotFound, about::About};
 
 use yew_router::prelude::*;
 use yew::prelude::*;
@@ -10,6 +10,8 @@ use yew::prelude::*;
 pub enum Route {
     #[at("/")]
     Home,
+    #[at("/about")]
+    About,
     #[not_found]
     #[at("/404")]
     NotFound,
@@ -20,7 +22,8 @@ pub fn App() -> Html {
     html! {
         <BrowserRouter>
             <Navbar />
-
+            <Particles />
+            <div id="particles-js" class="flex"></div>
             <main>
                 <Switch<Route> render={switch} />
             </main>
@@ -35,9 +38,11 @@ fn main(){
 
 fn switch(routes: Route) -> Html {
     match routes {
-        
         Route::Home => {
             html! { <Home /> }
+        },
+        Route::About => {
+            html! { <About /> }
         }
         Route::NotFound => {
             html! { <PageNotFound /> }
