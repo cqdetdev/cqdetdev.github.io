@@ -19,7 +19,7 @@ pub(crate) fn Home() -> Html {
 
         <div class="bg-transparent text-white shadow-lg border-2 border-persian-red rounded-xl">
           <div class="bg-persian-red py-2 px-4 text-center rounded-t-lg font-bold">{"Where?"}</div>
-          <div class="p-4 text-center text-gray-300">{"I started working solo on my first Discord Bot and then continued solo working on small web-development projects. I then expanded out working on a plethora of relevant Minecraft Bedrock servers such as OwnagePE, Versai, Syn, Vasar and even my own server, Azura."}</div>
+          <div class="p-4 text-center text-gray-300">{"I started working solo on my first Discord Bot and then continued solo working on small web-development projects. I then expanded out working on a plethora of relevant Minecraft Bedrock servers such as OwnagePE, Versai, Syn, Vasar, Zeqa and even my own server, Azura."}</div>
         </div>
       </div>
     </div>
