@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="has-background-black">
+<html lang="en" class="bg-gray-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,33 @@
     <meta property="og:title" content="cqdetdev" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://cqdetdev.github.io" />
-    <meta property="og:image" content="https://cdn.discordapp.com/avatars/522895569039917066/cfeb39aa5e6d8290f4a406c2ac3859af.png?size=128" />
-    <meta property="og:description" content="Welcome to cqdetdev.github.io!" />
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/522895569039917066/cfeb39aa5e6d8290f4a406c2ac3859af.png?size=64" />
+    <meta property="og:description" content="Welcome to cqdetdev.github.io! Home of my portfolio and all things funny." />
     <meta name="theme-color" content="#cc0f35">
     
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link data-trunk rel="copy-file" type="image/x-icon" href="/img/favicon.ico">
+    
 
     <!-- Include this to make the og:image larger -->
     <meta name="twitter:card" content="summary_large_image">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  main: '#da0037',
+                  "light-shade": '#F4F9F7',
+                  'light-accent': '#A7AEA4',
+                  'dark-accent': '#878C9E',
+                  'dark-shade': '#2D333E'
+                }
+              }
+            }
+          }
+    </script>
+    <title>cqdetdev</title>
 
-    <title>Welcome to cqdetdev.github.io</title>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
   />
 </head>
 <body>

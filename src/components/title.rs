@@ -4,11 +4,17 @@ use yew::prelude::*;
 pub struct TitleProps {}
 
 #[function_component]
-pub fn Title(props: &TitleProps) -> Html {
+pub(crate) fn Title(props: &TitleProps) -> Html {
     let TitleProps {} = props;
     html! {
-        <div class="container">
-            <h1 class="title is-1 has-text-centered has-text-danger-dark has-background-black">{ "cqdetdev.github.io" }</h1>
+    <div class="container">
+        <div
+            class="box has-background-dark has-text-danger"
+            // style="display: flex; justify-content: center; align-items: center; height: 20vh; width: 40vh"
+        >
+            {"cqdetdev"}
         </div>
+    </div>
+
     }
 }
