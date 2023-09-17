@@ -1,6 +1,4 @@
-setTimeout(function() {
-    var typed = new Typed('#element', {
-      strings: ['Wanna learn more about me?'],
-      typeSpeed: 70,
-    });
-  }, 0);
+var typed = new Typed('#element', {
+  strings: ['cadet: about me?'],
+  typeSpeed: 70,
+});

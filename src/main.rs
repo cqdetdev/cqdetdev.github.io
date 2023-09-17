@@ -1,10 +1,12 @@
 mod components;
-use components::{navbar::Navbar, title::Title, counter::Counter, particles::Particles, typed::Typed};
+use components::{
+    counter::Counter, navbar::Navbar, particles::Particles, title::Title, typed::Typed,
+};
 mod pages;
-use pages::{home::Home, page_not_found::PageNotFound, about::About};
+use pages::{about::About, home::Home, login::Login, page_not_found::PageNotFound};
 
-use yew_router::prelude::*;
 use yew::prelude::*;
+use yew_router::prelude::*;
 
 #[derive(Routable, PartialEq, Eq, Clone, Debug)]
 pub enum Route {
@@ -12,6 +14,8 @@ pub enum Route {
     Home,
     #[at("/about")]
     About,
+    #[at("/login")]
+    Login,
     #[not_found]
     #[at("/404")]
     NotFound,
@@ -27,12 +31,12 @@ pub fn App() -> Html {
             <main>
                 <Switch<Route> render={switch} />
             </main>
-            
+
         </BrowserRouter>
     }
 }
 
-fn main(){
+fn main() {
     yew::Renderer::<App>::new().render();
 }
 
@@ -40,9 +44,12 @@ fn switch(routes: Route) -> Html {
     match routes {
         Route::Home => {
             html! { <Home /> }
-        },
+        }
         Route::About => {
             html! { <About /> }
+        }
+        Route::Login => {
+            html! { <Login /> }
         }
         Route::NotFound => {
             html! { <PageNotFound /> }
